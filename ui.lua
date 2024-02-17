@@ -944,7 +944,7 @@ function ui.add_tab(text, iconid, id)
                 toggle.ImageButton.MouseButton1Click:Connect(
                 function()
                     toggle_value = not toggle_value
-                    value_change(not toggle_value)
+                    value_change(toggle_value)
                 end
             )
 
