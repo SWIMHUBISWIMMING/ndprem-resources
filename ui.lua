@@ -921,11 +921,12 @@ function ui.add_tab(text, iconid, id)
             toggle.ImageButton.BackgroundTransparency = toggle_value and 0 or 1
 
             element_size = element_size + toggle.Size.Y.Offset + 5
-
+            local prev = args["default"]
             local function value_change(to_value)
-                if toggle_value == to_value then
+                if prev == to_value then
                     return
                 end
+                prev = to_value
                 tweenservice:Create(
                     toggle.ImageButton,
                     TweenInfo.new(0.15),
